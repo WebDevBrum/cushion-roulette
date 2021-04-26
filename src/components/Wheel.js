@@ -39,6 +39,7 @@ export default () => {
       <button type="button" onClick={handleSpinClick}>
         SPIN
       </button>
+      {/* This should really be conditionally rendered here */}
       <Modal programmeNumber={programmeNumber} visibility={visibility} />
     </>
   );

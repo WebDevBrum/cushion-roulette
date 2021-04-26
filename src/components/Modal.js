@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
+// Proptypes ?
+// Move this conditional rendering up one level to Component Render
+
 function Modal(props) {
   const { visibility, programmeNumber } = props;
 
