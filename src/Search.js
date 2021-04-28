@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./components/Header";
+import SearchTitles from "./components/SearchTitles";
 
 // STATE SHOULD CLEAR ON RENDER HERE
 
@@ -12,6 +13,7 @@ function Search(props) {
       <Link to="/roulette">
         <button type="button">Lets go!</button>
       </Link>
+      <SearchTitles />
     </>
   );
 }
