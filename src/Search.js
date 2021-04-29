@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./components/Header";
 import SearchTitles from "./components/SearchTitles";
+import Selections from "./components/Selections";
 
 // STATE SHOULD CLEAR ON RENDER HERE
 
@@ -10,6 +11,7 @@ function Search(props) {
     <>
       <Header config={{ button1: "login", button2: "user" }} />
       <h1>THIS IS THE SEARCH PAGE</h1>
+      <Selections />
       <Link to="/roulette">
         <button type="button">Lets go!</button>
       </Link>
