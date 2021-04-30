@@ -12,9 +12,6 @@ function Search(props) {
       <Header config={{ button1: "login", button2: "user" }} />
       <h1>THIS IS THE SEARCH PAGE</h1>
       <Selections />
-      <Link to="/roulette">
-        <button type="button">Lets go!</button>
-      </Link>
       <SearchTitles />
     </>
   );

@@ -45,10 +45,17 @@ small {
 }
 
 .tileImage {
-  height: 200px;
-  width: 200px;
-  margin-left: 10px;
-  
+  height: 120px;
+  width: 120px;
+  margin: 5px;
+}
+
+.go-button {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 
@@ -106,6 +113,16 @@ small {
   
   .input {
       margin-bottom: 0;
+  }
+
+  .tiles-left {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tiles-right {
+    display: flex;
+    flex-direction: row;
   }
 }
 
