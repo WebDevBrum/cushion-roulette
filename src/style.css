@@ -72,6 +72,8 @@ small {
 
 .form {
   display:grid;
+  margin-bottom: 0px;
+  
 }
 
 .label {
@@ -80,38 +82,63 @@ small {
   text-transform: uppercase;
 }
 
+.search-bar {
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;  
+  /* position: relative; */
+
+}
+
 .input {
+  display: flex;;
+  flex: 1;
   font-size: 1.6rem;
   padding: 0.5rem 2rem;
   line-height: 2.8rem;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border: 1px solid #ddd;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem auto;
+  width: 80%;
+  border-right: 0px;
 }
 
-.button {
+.search-button {
+  /* position: absolute;
+  position: top-right;
+  z-index: 1;
   background-color: rgba(0,0,0,0.75);
   color: white;
   padding: 1rem 2rem;
   border: 1px solid rgba(0,0,0,0.75);
-  border-radius: 20px;
-  font-size: 1.4rem;
+  /* border-radius: 20px; */
+  /* font-size: 1.4rem;
   cursor: pointer;
-  transition: background-color 250ms;
+  transition: background-color 250ms; */ 
+  border: 0px;
+  background: white;
 }
 
 .button:hover {
   background-color: rgba(0,0,0,0.85);
 }
 
+
+
 @media (min-width:786px){
-  .form {
+  .card-list {
       grid-template-columns: auto 1fr auto;
       grid-gap: 1rem;
       align-items: center;
+      
+      
   }
   
   .input {
+     
       margin-bottom: 0;
   }
 
@@ -127,7 +154,7 @@ small {
 }
 
 .card-list {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .card {

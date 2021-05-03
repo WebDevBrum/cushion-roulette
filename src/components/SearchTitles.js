@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
+import { HiEye } from "react-icons/hi";
 import ResultCard from "./ResultCard.js";
 
 function SearchTitles() {
@@ -29,20 +30,19 @@ function SearchTitles() {
   return (
     <>
       <form className="form" onSubmit={searchTitles}>
-        <label className="label" htmlFor="query">
-          Title Name
-        </label>
-        <input
-          className="input"
-          type="text"
-          name="query"
-          placeholder="i.e. Line of Duty"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button className="button" type="submit">
-          Search
-        </button>
+        <div className="search-bar">
+          <input
+            className="input"
+            type="text"
+            name="query"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button className="search-button" type="submit">
+            <HiEye />
+          </button>
+        </div>
       </form>
       <div className="card-list">
         {titles
