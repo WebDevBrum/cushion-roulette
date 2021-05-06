@@ -116,7 +116,7 @@ small {
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
-  margin: 10px;  
+  margin: 10px 15px;  
   /* position: relative; */
 
 }
@@ -190,6 +190,7 @@ small {
 
 .card {
   display: flex;
+  
   padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
@@ -207,10 +208,13 @@ small {
 }
 
 p.card--desc {
+  
   font-size: 10px;
+  
 }
 
 p.card--details {
+  
   font-size: 8px;
 }
 
@@ -223,4 +227,14 @@ p.card--details {
 }
 .card--title {
   margin-top: 0px;
+}
+
+.title-button {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  color: green;
+  background: transparent;
+  border: 2px solid green;
+ 
 }

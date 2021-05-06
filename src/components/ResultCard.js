@@ -27,6 +27,9 @@ function ResultCard({ title }) {
           RATING: {title.vote_average}
         </p>
       </div>
+      <button className="title-button" type="button">
+        ADD
+      </button>
     </div>
   );
 }
