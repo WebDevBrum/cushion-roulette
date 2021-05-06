@@ -11,13 +11,18 @@ function ResultCard({ title }) {
       />
       <div className="card--content">
         <h3 className="card--title">{title.title}</h3>
-        <p>
+        {/* <p>
           <small>RELEASE DATE: {title.release_date}</small>
         </p>
         <p>
           <small>RATING: {title.vote_average}</small>
-        </p>
+        </p> */}
         <p className="card--desc">{title.overview}</p>
+        <p className="card--details">
+          RELEASE DATE: {title.release_date}
+          <br />
+          RATING: {title.vote_average}
+        </p>
       </div>
     </div>
   );
