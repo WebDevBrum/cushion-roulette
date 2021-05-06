@@ -2,6 +2,7 @@
 import React from "react";
 
 function ResultCard({ title }) {
+  console.log(title);
   return (
     <div className="card">
       <img
@@ -10,7 +11,9 @@ function ResultCard({ title }) {
         alt={`${title.title} poster`}
       />
       <div className="card--content">
-        <h3 className="card--title">{title.title}</h3>
+        <h3 className="card--title">
+          {title.title ? title.title : title.name}
+        </h3>
         {/* <p>
           <small>RELEASE DATE: {title.release_date}</small>
         </p>
