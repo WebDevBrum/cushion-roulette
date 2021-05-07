@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Wheel from "./components/Wheel.js";
 import Header from "./components/Header";
 
-function Roulette(props) {
+function Roulette() {
   return (
     <>
       <Header config={{ button1: "user" }} />

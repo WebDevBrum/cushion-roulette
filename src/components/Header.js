@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
-import { HiEye } from "react-icons/hi";
+
 import { IoMdUnlock as Lock } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
