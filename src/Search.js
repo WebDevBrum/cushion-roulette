@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 import Header from "./components/Header";
@@ -6,12 +7,14 @@ import Selections from "./components/Selections";
 
 // STATE SHOULD CLEAR ON RENDER HERE
 
-function Search() {
+function Search(props) {
+  const { onClick } = props;
+
   return (
     <div className="search-div">
       <Header config={{ button1: "login", button2: "user" }} />
       <Selections />
-      <SearchTitles />
+      <SearchTitles onClick={onClick} />
     </div>
   );
 }

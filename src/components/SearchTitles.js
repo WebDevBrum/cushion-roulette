@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import { HiEye } from "react-icons/hi";
 import ResultCard from "./ResultCard.js";
 
-function SearchTitles() {
+function SearchTitles(props) {
+  const { onClick } = props;
   // Search query state
   const [query, setQuery] = useState("");
   // Create and update the state for matched movie/tv titles
@@ -48,7 +50,7 @@ function SearchTitles() {
         {titles
           .filter((title) => title.poster_path)
           .map((title) => (
-            <ResultCard title={title} key={title.id} />
+            <ResultCard title={title} key={title.id} onClick={onClick} />
           ))}
       </div>
     </>

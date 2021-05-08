@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function ResultCard({ title }) {
-  console.log(title);
+function ResultCard({ title, onClick }) {
   return (
     <div className="card">
       <img
@@ -27,7 +26,11 @@ function ResultCard({ title }) {
           RATING: {title.vote_average}
         </p>
       </div>
-      <button className="title-button" type="button">
+      <button
+        className="title-button"
+        type="button"
+        onClick={() => onClick(title)}
+      >
         ADD
       </button>
     </div>
