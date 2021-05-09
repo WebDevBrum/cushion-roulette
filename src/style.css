@@ -215,16 +215,20 @@ small {
 .card--title {
   display: flex;
   margin-bottom: 0.5rem;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
 }
 
-p.card--desc {
+.card--desc {
+  /* need to work this out */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 20px;
   
   font-size: 10px;
   
 }
 
-p.card--details {
+.card--details {
   
   font-size: 8px;
 }
@@ -254,4 +258,16 @@ p.card--details {
   font-size: 15px;
   
  
+}
+
+.title-button-disabled {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  
+  color: #666666;
+  background: #666666;
+  border: 2px solid #666666;
+  border-radius: 5px;
+  font-size: 15px;
 }

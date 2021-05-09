@@ -8,13 +8,13 @@ import Selections from "./components/Selections";
 // STATE SHOULD CLEAR ON RENDER HERE
 
 function Search(props) {
-  const { onClick } = props;
+  const { onClick, selections } = props;
 
   return (
     <div className="search-div">
       <Header config={{ button1: "login", button2: "user" }} />
-      <Selections />
-      <SearchTitles onClick={onClick} />
+      <Selections selections={selections} />
+      <SearchTitles onClick={onClick} selections={selections.length} />
     </div>
   );
 }

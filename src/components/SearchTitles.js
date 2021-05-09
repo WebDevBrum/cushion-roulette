@@ -5,7 +5,7 @@ import { HiEye } from "react-icons/hi";
 import ResultCard from "./ResultCard.js";
 
 function SearchTitles(props) {
-  const { onClick } = props;
+  const { onClick, selections } = props;
   // Search query state
   const [query, setQuery] = useState("");
   // Create and update the state for matched movie/tv titles
@@ -50,7 +50,12 @@ function SearchTitles(props) {
         {titles
           .filter((title) => title.poster_path)
           .map((title) => (
-            <ResultCard title={title} key={title.id} onClick={onClick} />
+            <ResultCard
+              title={title}
+              key={title.id}
+              onClick={onClick}
+              selectionsAmount={selections}
+            />
           ))}
       </div>
     </>

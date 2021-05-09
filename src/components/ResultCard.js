@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function ResultCard({ title, onClick }) {
+function ResultCard({ title, onClick, selectionsAmount }) {
+  console.log(selectionsAmount);
   return (
     <div className="card">
       <img
@@ -27,9 +28,12 @@ function ResultCard({ title, onClick }) {
         </p>
       </div>
       <button
-        className="title-button"
+        className={
+          selectionsAmount < 6 ? "title-button" : "title-button-disabled"
+        }
         type="button"
         onClick={() => onClick(title)}
+        disabled={selectionsAmount === 6}
       >
         ADD
       </button>

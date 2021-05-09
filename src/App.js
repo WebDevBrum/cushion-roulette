@@ -29,7 +29,9 @@ function App() {
           <Route
             exact
             path="/search"
-            render={(props) => <Search {...props} onClick={onClick} />}
+            render={(props) => (
+              <Search {...props} onClick={onClick} selections={selections} />
+            )}
           />
           <Route exact path="/roulette" component={Roulette} />
           <Route exact path="/user" component={User} />
