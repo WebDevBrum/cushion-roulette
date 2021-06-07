@@ -4,17 +4,19 @@ import React from "react";
 import Header from "./components/Header";
 import SearchTitles from "./components/SearchTitles";
 import Selections from "./components/Selections";
+import Footer from "./components/Footer";
 
 // STATE SHOULD CLEAR ON RENDER HERE
 
 function Search(props) {
-  const { onClick, selections } = props;
+  const { onClick, selections, clear } = props;
 
   return (
     <div className="search-div">
       <Header config={{ button1: "login", button2: "user" }} />
       <Selections selections={selections} />
       <SearchTitles onClick={onClick} selections={selections.length} />
+      <Footer clear={clear} />
     </div>
   );
 }

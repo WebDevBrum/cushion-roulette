@@ -45,7 +45,7 @@ function Selections(props) {
       </div>
       <div className="go-button">
         <Link to="/roulette">
-          <button type="button">Lets go!</button>
+          <button type="button">READY</button>
         </Link>
       </div>
     </div>

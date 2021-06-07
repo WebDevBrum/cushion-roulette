@@ -3,6 +3,10 @@ import React from "react";
 
 function ResultCard({ title, onClick, selectionsAmount }) {
   console.log(selectionsAmount);
+
+  // limits the length of a string, used here to limit title descriptions
+  const limitedString = (string, limit) => `${string.substring(0, limit)}...`;
+
   return (
     <div className="card">
       <img
@@ -20,7 +24,7 @@ function ResultCard({ title, onClick, selectionsAmount }) {
         <p>
           <small>RATING: {title.vote_average}</small>
         </p> */}
-        <p className="card--desc">{title.overview}</p>
+        <p className="card--desc">{limitedString(title.overview, 170)}</p>
         <p className="card--details">
           RELEASE DATE: {title.release_date}
           <br />

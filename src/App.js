@@ -14,11 +14,16 @@ import Login from "./Login";
 
 function App() {
   const [selections, addSelection] = useState([]);
-  const [history, addToHistory] = useState([]);
+  // const [history, addToHistory] = useState([]);
 
   const onClick = (input) => {
     addSelection((arr) => [...arr, input]);
     console.log(selections);
+    window.scrollTo(0, 0);
+  };
+
+  const clearState = () => {
+    addSelection([]);
   };
 
   return (
@@ -30,7 +35,12 @@ function App() {
             exact
             path="/search"
             render={(props) => (
-              <Search {...props} onClick={onClick} selections={selections} />
+              <Search
+                {...props}
+                onClick={onClick}
+                selections={selections}
+                clear={clearState}
+              />
             )}
           />
           <Route exact path="/roulette" component={Roulette} />

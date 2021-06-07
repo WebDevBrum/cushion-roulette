@@ -94,6 +94,18 @@ small {
   align-content: center;
   justify-content: center;
   margin: 0 auto;
+  
+}
+
+.go-button button {
+  height: 110px;
+  width: 110px;
+  color:#A5D6A7;
+  background: transparent;
+  border: 2px solid #A5D6A7;
+  border-radius: 50%;
+  font-size: 25px;
+  padding: 10px;
 }
 
 
@@ -196,6 +208,7 @@ small {
   margin-top: 1rem;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -271,3 +284,48 @@ small {
   border-radius: 5px;
   font-size: 15px;
 }
+
+.footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  color: white;
+  /* text-align: center; */
+  background-color: #121212;
+  color: #FFF;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px 10px;
+  font-size: 1.2em;
+  height: 50px;
+}
+
+.footer-buttons {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  font-size: 3px;
+}
+
+.clear-button {
+  color: #ccc;
+  background-color: transparent;
+  /* border: none; */
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  color:#EF9E9A;
+  background: transparent;
+  border: 2px solid #EF9E9A;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 12em;
+}
+

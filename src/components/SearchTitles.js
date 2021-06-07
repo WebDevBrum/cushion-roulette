@@ -40,6 +40,7 @@ function SearchTitles(props) {
             placeholder="Search..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onFocus={(e) => (e.target.value = "")}
           />
           <button className="search-button" type="submit">
             <HiEye />
