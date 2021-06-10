@@ -32,8 +32,9 @@ function SearchTitles(props) {
   return (
     <>
       <form className="form" onSubmit={searchTitles}>
-        <div className="search-bar">
+        <div className="search-bar" role="search">
           <input
+            aria-label="search"
             className="input"
             type="text"
             name="query"
@@ -42,7 +43,11 @@ function SearchTitles(props) {
             onChange={(e) => setQuery(e.target.value)}
             onFocus={(e) => (e.target.value = "")}
           />
-          <button className="search-button" type="submit">
+          <button
+            aria-label="search-button"
+            className="search-button"
+            type="submit"
+          >
             <HiEye />
           </button>
         </div>
