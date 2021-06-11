@@ -97,7 +97,7 @@ small {
   
 }
 
-.go-button button {
+.go-button  .go-button-button {
   height: 110px;
   width: 110px;
   color:#A5D6A7;
@@ -108,6 +108,16 @@ small {
   padding: 10px;
 }
 
+.go-button-button:hover {
+  background-color: #A5D6A7; /* Green */
+  color: #1D1D1D;
+}
+
+.go-button-button:active {
+  background-color: #A5D6A7;
+  /* box-shadow: 0 5px #EF9E9A; */
+  transform: translateY(4px);
+}
 
 .container {
   margin: 0 auto;
@@ -259,30 +269,39 @@ small {
 
 /* GET THIS TOO WRAP AROUND BUTTON */
 .title-button {
-  
   display: flex;
   align-self: flex-end;
   margin-left: auto;
-  
   color:#A5D6A7;
   background: transparent;
   border: 2px solid #A5D6A7;
   border-radius: 5px;
   font-size: 15px;
-  
- 
+  transition-duration: 0.4s;
 }
 
 .title-button-disabled {
   display: flex;
   align-self: flex-end;
   margin-left: auto;
-  
   color: #666666;
   background: #666666;
   border: 2px solid #666666;
   border-radius: 5px;
   font-size: 15px;
+  cursor: not-allowed;
+}
+
+.title-button:hover {
+  background-color: #A5D6A7; /* Green */
+  color: #1D1D1D; /* Green */
+}
+
+.title-button:active {
+  background-color: #A5D6A7;
+
+  /* box-shadow: 0 5px #EF9E; */
+  transform: translateY(4px);
 }
 
 .footer {
@@ -328,4 +347,17 @@ small {
   font-size: 15px;
   width: 12em;
 }
+
+.clear-button:hover {
+  background-color: #EF9E9A; /* Green */
+  color: #1D1D1D; /* Green */
+}
+
+.clear-button:active {
+  background-color: #EF9E9A;
+
+  /* box-shadow: 0 5px #EF9E; */
+  transform: translateY(4px);
+}
+
 
