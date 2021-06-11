@@ -34,6 +34,7 @@ function SearchTitles(props) {
       <form className="form" onSubmit={searchTitles}>
         <div className="search-bar" role="search">
           <input
+            required
             aria-label="search"
             className="input"
             type="text"

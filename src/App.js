@@ -43,7 +43,13 @@ function App() {
               />
             )}
           />
-          <Route exact path="/roulette" component={Roulette} />
+          <Route
+            exact
+            path="/roulette"
+            render={(props) => (
+              <Roulette {...props} onClick={onClick} selections={selections} />
+            )}
+          />
           <Route exact path="/user" component={User} />
           <Route exact path="/login" component={Login} />
           {/* <PrivateToute /> */}
