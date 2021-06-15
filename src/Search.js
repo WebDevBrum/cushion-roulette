@@ -14,9 +14,9 @@ function Search(props) {
   return (
     <div className="search-div">
       <Header config={{ button1: "login", button2: "user" }} />
-      <Selections selections={selections} />
+      <Selections selections={selections} buttonRqd />
       <SearchTitles onClick={onClick} selections={selections.length} />
-      <Footer clear={clear} />
+      <Footer clear={clear} buttonText="CLEAR SELECTIONS" />
     </div>
   );
 }

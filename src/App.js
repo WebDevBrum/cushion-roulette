@@ -47,7 +47,12 @@ function App() {
             exact
             path="/roulette"
             render={(props) => (
-              <Roulette {...props} onClick={onClick} selections={selections} />
+              <Roulette
+                {...props}
+                onClick={onClick}
+                selections={selections}
+                clear={clearState}
+              />
             )}
           />
           <Route exact path="/user" component={User} />

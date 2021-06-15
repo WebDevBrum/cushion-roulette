@@ -70,7 +70,6 @@ small {
 
 .tile-grid {
   display: flex;
-  
 }
 .tiles-left {
   display: flex;
@@ -88,6 +87,25 @@ small {
   margin: 5px;
 }
 
+/* for roulette wheel display */
+.wheel-tile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.wheel-tiles-left {
+  display: flex;
+  flex-direction: row;
+  
+}
+.wheel-tiles-right {
+  display: flex;
+  flex-direction: row;
+  
+}
+
 .go-button {
   display: flex;
   flex-direction: column;
@@ -98,6 +116,8 @@ small {
 }
 
 .go-button  .go-button-button {
+  transition-duration: 0.3s;
+  
   height: 110px;
   width: 110px;
   color:#A5D6A7;
@@ -106,6 +126,12 @@ small {
   border-radius: 50%;
   font-size: 25px;
   padding: 10px;
+}
+
+.go-button-disabled {
+  visibility: hidden;
+  background-color: #EF9E9A;
+  transition-duration: 0.2s;
 }
 
 .go-button-button:hover {
@@ -235,6 +261,18 @@ small {
   
 }
 
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  {
+    
+    .tileImage {
+      height: 90px;
+      width: 90px;
+      margin: 3px;
+    }
+  }
+
 .card--title {
   display: flex;
   margin-bottom: 0.5rem;
@@ -313,7 +351,7 @@ small {
 
   color: white;
   /* text-align: center; */
-  background-color: #121212;
+  /* background-color: #1D1D1D; */
   color: #FFF;
   align-items: center;
   margin-top: 0px;
@@ -341,7 +379,7 @@ small {
   padding: 10px;
   font-size: 20px;
   color:#EF9E9A;
-  background: transparent;
+  background-color: #1D1D1D;
   border: 2px solid #EF9E9A;
   border-radius: 5px;
   font-size: 15px;
@@ -360,4 +398,7 @@ small {
   transform: translateY(4px);
 }
 
-
+.wheel {
+ display: flex;
+ justify-content: center;
+}

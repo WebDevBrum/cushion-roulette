@@ -3,17 +3,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Wheel from "./components/Wheel.js";
 import Header from "./components/Header";
+import Selections from "./components/Selections.js";
+import Footer from "./components/Footer.js";
 
 function Roulette(props) {
-  const { selections } = props;
+  const { selections, clear } = props;
 
   return (
     <>
       <Header config={{ button1: "user" }} />
-      <h1>THIS IS THE Roulette PAGE</h1>
       <Wheel selections={selections} />
+      <Selections selections={selections} buttonRqd={false} />
       <Link to="/search">
-        <button type="button">New Wheel</button>
+        <Footer clear={clear} buttonText="NEW WHEEL" />
       </Link>
     </>
   );

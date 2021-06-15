@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import Modal from "./Modal";
 
+const limitedString = (string, limit) => `${string.substring(0, limit)}`;
+
 export default (props) => {
   // eslint-disable-next-line react/destructuring-assignment
   const testArray = props.selections;
@@ -13,7 +15,9 @@ export default (props) => {
   testArray.map(
     (selection) =>
       options.push({
-        option: selection.title ? selection.title : selection.name,
+        option: selection.title
+          ? limitedString(selection.title, 15)
+          : limitedString(selection.name, 15),
       }),
     console.log(options),
     console.log(testArray)
@@ -43,17 +47,27 @@ export default (props) => {
 
   return (
     <>
-      <Wheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={programmeNumber}
-        data={options}
-        onStopSpinning={() => {
-          setMustSpin(false);
-          setVisibility(true);
-        }}
-        backgroundColors={["#a5d6a7", "#ef9e9a"]}
-        textColors={["#121212"]}
-      />
+      <div className="wheel">
+        <Wheel
+          mustStartSpinning={mustSpin}
+          prizeNumber={programmeNumber}
+          data={options}
+          onStopSpinning={() => {
+            setMustSpin(false);
+            setVisibility(true);
+          }}
+          backgroundColors={["#1D1D1D"]}
+          textColors={["#a5d6a7", "#ef9e9a"]}
+          outerBorderColor="#4CAF50"
+          innerBorderColor="#FFD700"
+          innerBorderWidth="2"
+          outerBorderWidth="2"
+          radiusLineColor="#f44336"
+          radiusLineWidth="2"
+          textDistance="60"
+          innerRadius="5"
+        />
+      </div>
       <button type="button" onClick={handleSpinClick}>
         SPIN
       </button>
