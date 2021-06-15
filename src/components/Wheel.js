@@ -61,14 +61,14 @@ export default (props) => {
           outerBorderColor="#4CAF50"
           innerBorderColor="#FFD700"
           innerBorderWidth="2"
-          outerBorderWidth="2"
+          outerBorderWidth="3"
           radiusLineColor="#f44336"
-          radiusLineWidth="2"
+          radiusLineWidth="0.5"
           textDistance="60"
           innerRadius="5"
         />
       </div>
-      <button type="button" onClick={handleSpinClick}>
+      <button className="spin-button" type="button" onClick={handleSpinClick}>
         SPIN
       </button>
       {/* This should really be conditionally rendered here */}

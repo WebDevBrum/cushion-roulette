@@ -92,6 +92,7 @@ small {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
   
 }
 
@@ -306,7 +307,7 @@ small {
 }
 
 /* GET THIS TOO WRAP AROUND BUTTON */
-.title-button {
+.title-button, .spin-button {
   display: flex;
   align-self: flex-end;
   margin-left: auto;
@@ -330,16 +331,23 @@ small {
   cursor: not-allowed;
 }
 
-.title-button:hover {
+.title-button:hover , .spin-button:hover {
   background-color: #A5D6A7; /* Green */
   color: #1D1D1D; /* Green */
 }
 
-.title-button:active {
+.title-button:active, .spin-button:active {
   background-color: #A5D6A7;
 
   /* box-shadow: 0 5px #EF9E; */
   transform: translateY(4px);
+}
+
+.spin-button {
+  margin: 0 auto;
+  font-size: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .footer {
@@ -376,7 +384,7 @@ small {
   background-color: transparent;
   /* border: none; */
   margin: 5px;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
   color:#EF9E9A;
   background-color: #1D1D1D;
