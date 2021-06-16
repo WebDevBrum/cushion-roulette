@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 // Move this conditional rendering up one level to Component Render
 
 function Modal(props) {
-  const { visibility, programmeNumber } = props;
+  const { visibility, programmeNumber, image } = props;
 
   // Is there a better way in react of not using querySelector?
   // Investigate use ref
@@ -24,17 +24,23 @@ function Modal(props) {
         closeModal();
       }
     });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
   });
 
   return (
     <div>
       <div className={visibility ? "modal-outer open" : "modal-outer"}>
         <div className={visibility ? "modal-inner open" : "modal-inner"}>
-          <p>You have selected!!</p>
+          <h2>YOU HAVE SELECTED!!</h2>
           <img
-            width="600"
-            height="600"
-            // src={imgSrc.replace("200", "600")}
+            width="400"
+            height="400"
+            src={`https:image.tmdb.org/t/p/w185_and_h278_bestv2/${image}`}
             alt={programmeNumber}
           />
           <p>{programmeNumber}</p>

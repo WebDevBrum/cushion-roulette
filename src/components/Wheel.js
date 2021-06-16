@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/display-name */
 import React, { useState } from "react";
@@ -74,6 +75,7 @@ export default (props) => {
       {/* This should really be conditionally rendered here */}
       <Modal
         programmeNumber={options[programmeNumber].option}
+        image={props.selections[programmeNumber].poster_path}
         visibility={visibility}
       />
     </>
