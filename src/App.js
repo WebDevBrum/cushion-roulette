@@ -43,18 +43,22 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path="/roulette"
-            render={(props) => (
-              <Roulette
-                {...props}
-                onClick={onClick}
-                selections={selections}
-                clear={clearState}
-              />
-            )}
-          />
+          {selections[0] ? (
+            <Route
+              exact
+              path="/roulette"
+              render={(props) => (
+                <Roulette
+                  {...props}
+                  onClick={onClick}
+                  selections={selections}
+                  clear={clearState}
+                />
+              )}
+            />
+          ) : (
+            <Redirect to="/" />
+          )}
           <Route exact path="/user" component={User} />
           <Route exact path="/login" component={Login} />
           {/* <PrivateToute /> */}

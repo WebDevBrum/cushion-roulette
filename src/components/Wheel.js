@@ -77,6 +77,11 @@ export default (props) => {
         programmeNumber={options[programmeNumber].option}
         image={props.selections[programmeNumber].poster_path}
         visibility={visibility}
+        name={
+          props.selections[programmeNumber].title
+            ? props.selections[programmeNumber].title
+            : props.selections[programmeNumber].name
+        }
       />
     </>
   );
