@@ -59,7 +59,11 @@ function App() {
           ) : (
             <Redirect to="/" />
           )}
-          <Route exact path="/user" component={User} />
+          <Route
+            exact
+            path="/user"
+            render={(props) => <User {...props} selections={selections} />}
+          />
           <Route exact path="/login" component={Login} />
           {/* <PrivateToute /> */}
           {/* <Route unhandled error />
