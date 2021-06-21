@@ -7,12 +7,12 @@ import Selections from "./components/Selections.js";
 import Footer from "./components/Footer.js";
 
 function Roulette(props) {
-  const { selections, clear, addHistory } = props;
+  const { selections, clear } = props;
 
   return (
     <>
       <Header config={{ button1: "user" }} />
-      <Wheel selections={selections} addHistory={addHistory} />
+      <Wheel selections={selections} />
       <Selections selections={selections} buttonRqd={false} />
       <Link to="/search">
         <Footer clear={clear} buttonText="NEW WHEEL" />

@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { Link } from "react-router-dom";
 
-function HistoryCard({ selections, history }) {
+function HistoryCard({ selections, history, setFromHistory }) {
   console.log(selections);
 
   // limits the length of a string, used here to limit title descriptions
@@ -28,6 +29,11 @@ function HistoryCard({ selections, history }) {
           <small>RATING: {title.vote_average}</small>
         </p> */}
       </div>
+      <Link to="/roulette">
+        <button type="button" onClick={() => setFromHistory(historyItem)}>
+          Test
+        </button>
+      </Link>
       {/* <button
         className={
           selectionsAmount < 6 ? "title-button" : "title-button-disabled"

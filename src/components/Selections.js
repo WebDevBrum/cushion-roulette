@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
@@ -51,6 +52,7 @@ function Selections(props) {
                 selections[0] ? "go-button-button" : "go-button-disabled"
               }
               type="button"
+              onClick={props.addHistory}
               disabled={!selections[0]}
             >
               {selections[0] ? "READY" : ""}

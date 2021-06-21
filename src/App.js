@@ -6,7 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Roulette from "./Roulette";
 import Search from "./Search";
 import User from "./User";
@@ -34,6 +34,14 @@ function App() {
     addSelection([]);
   };
 
+  const setFromHistory = (data) => {
+    console.log(data);
+    clearState();
+    data.forEach((item) => {
+      addSelection((arr) => [...arr, item]);
+    });
+  };
+
   return (
     <Router>
       <div>
@@ -48,6 +56,7 @@ function App() {
                 onClick={onClick}
                 selections={selections}
                 clear={clearState}
+                addHistory={addHistory}
               />
             )}
           />
@@ -61,7 +70,6 @@ function App() {
                   onClick={onClick}
                   selections={selections}
                   clear={clearState}
-                  addHistory={addHistory}
                 />
               )}
             />
@@ -72,7 +80,12 @@ function App() {
             exact
             path="/user"
             render={(props) => (
-              <User {...props} selections={selections} history={history} />
+              <User
+                {...props}
+                selections={selections}
+                history={history}
+                setFromHistory={setFromHistory}
+              />
             )}
           />
           <Route exact path="/login" component={Login} />
