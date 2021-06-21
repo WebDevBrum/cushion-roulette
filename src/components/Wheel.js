@@ -44,6 +44,7 @@ export default (props) => {
     setProgrammeNumber(newProgrammeNumber);
     setMustSpin(true);
     console.log(props.selections[0].original_title);
+    props.addHistory();
   };
 
   return (

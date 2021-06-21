@@ -14,12 +14,20 @@ import Login from "./Login";
 
 function App() {
   const [selections, addSelection] = useState([]);
-  // const [history, addToHistory] = useState([]);
+  const [history, addToHistory] = useState([]);
 
   const onClick = (input) => {
     addSelection((arr) => [...arr, input]);
     console.log(selections);
     window.scrollTo(0, 0);
+  };
+
+  const addHistory = () => {
+    console.log("add to history");
+    const dateAdded = new Date();
+    // adds date to selections object
+    selections[0].historyDate = dateAdded;
+    addToHistory((arr) => [...arr, selections]);
   };
 
   const clearState = () => {
@@ -53,6 +61,7 @@ function App() {
                   onClick={onClick}
                   selections={selections}
                   clear={clearState}
+                  addHistory={addHistory}
                 />
               )}
             />
@@ -62,7 +71,9 @@ function App() {
           <Route
             exact
             path="/user"
-            render={(props) => <User {...props} selections={selections} />}
+            render={(props) => (
+              <User {...props} selections={selections} history={history} />
+            )}
           />
           <Route exact path="/login" component={Login} />
           {/* <PrivateToute /> */}
