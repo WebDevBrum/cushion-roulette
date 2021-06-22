@@ -1,49 +1,45 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 function HistoryCard({ selections, history, setFromHistory }) {
   console.log(selections);
+  moment.locale("en-gb");
 
   // limits the length of a string, used here to limit title descriptions
   // const limitedString = (string, limit) => `${string.substring(0, limit)}...`;
 
   return history.map((historyItem, historyIndex) => (
-    <div className="card" key={historyIndex}>
-      <img
-        className="card--image"
-        src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${historyItem[0].poster_path}`}
-        alt={`${history[0].title} poster`}
-      />
-      <div className="card--content">
-        {/* NEED TO ADD A FOR EACH HERE */}
-        {historyItem.map((selection, index) => (
-          <h3 key={index}>
-            {selection.title ? selection.title : selection.name}
-          </h3>
-        ))}
-        {/* <p>
-          <small>RELEASE DATE: {title.release_date}</small>
-        </p>
-        <p>
-          <small>RATING: {title.vote_average}</small>
-        </p> */}
+    <div className="history-card-list">
+      <div className="card" key={historyIndex}>
+        <div>
+          <img
+            className="card--image"
+            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${historyItem[0].poster_path}`}
+            alt={`${history[0].title} poster`}
+          />
+          <p>{moment(historyItem[0].historyDate).format("L")}</p>
+        </div>
+        <div className="card--content">
+          {historyItem.map((selection, index) => (
+            <p className="history--card--desc" key={index}>
+              ☆ {selection.title ? selection.title : selection.name}
+            </p>
+          ))}
+        </div>
+        <div className="history-button">
+          <Link to="/roulette" className="history-button">
+            <button
+              className="title-button"
+              type="button"
+              onClick={() => setFromHistory(historyItem)}
+            >
+              SPIN!
+            </button>
+          </Link>
+        </div>
       </div>
-      <Link to="/roulette">
-        <button type="button" onClick={() => setFromHistory(historyItem)}>
-          Test
-        </button>
-      </Link>
-      {/* <button
-        className={
-          selectionsAmount < 6 ? "title-button" : "title-button-disabled"
-        }
-        type="button"
-        onClick={() => onClick(title)}
-        disabled={selectionsAmount === 6}
-      >
-        ADD
-      </button> */}
     </div>
   ));
 }

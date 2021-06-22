@@ -246,6 +246,9 @@ small {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 50px;
+
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .card {
@@ -290,8 +293,15 @@ small {
   
 }
 
-.card--details {
+.history--card--desc {
+  font-size: 11px;
+  margin-top: 0px;
+  margin-bottom: 2px;
   
+  
+}
+
+.card--details {
   font-size: 8px;
 }
 
@@ -317,6 +327,19 @@ small {
   border-radius: 5px;
   font-size: 15px;
   transition-duration: 0.4s;
+}
+
+.history-button {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.history-card-list {
+  max-width: 60rem;
+  margin: 0 auto;
+  
 }
 
 .title-button-disabled {
