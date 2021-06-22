@@ -294,11 +294,17 @@ small {
 }
 
 .history--card--desc {
-  font-size: 11px;
+  
+  font-size: 14px;
   margin-top: 0px;
-  margin-bottom: 2px;
-  
-  
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.date {
+  font-size: 1.2rem;
+  margin-top: 3px;
+  margin-bottom: 1px;
 }
 
 .card--details {
@@ -490,9 +496,18 @@ small {
   and (max-device-width: 480px)
   {
 
+
   .modal-inner {
       max-width: 100px;
       min-width: 300px;
       padding: 10px;
+    }
+
+    .history--card--desc {
+      display: inline-block;
+      font-size: 10px;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      margin-right: 10px;
     }
   }

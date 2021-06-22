@@ -8,7 +8,7 @@ function User({ selections, history, setFromHistory }) {
   return (
     <>
       <Header config={{ button1: "search" }} />
-      <h1>THIS IS THE USER PROFILE PAGE</h1>
+      <h1>Previous Wheels:</h1>
       <HistoryCard
         selections={selections}
         history={history}

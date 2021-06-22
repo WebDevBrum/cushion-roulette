@@ -19,12 +19,15 @@ function HistoryCard({ selections, history, setFromHistory }) {
             src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${historyItem[0].poster_path}`}
             alt={`${history[0].title} poster`}
           />
-          <p>{moment(historyItem[0].historyDate).format("L")}</p>
+          <p className="date">Added:</p>
+          <p className="date">
+            {moment(historyItem[0].historyDate).format("DD-MM-YYYY")}
+          </p>
         </div>
         <div className="card--content">
           {historyItem.map((selection, index) => (
             <p className="history--card--desc" key={index}>
-              ☆ {selection.title ? selection.title : selection.name}
+              {index + 1}) {selection.title ? selection.title : selection.name}
             </p>
           ))}
         </div>
@@ -35,7 +38,7 @@ function HistoryCard({ selections, history, setFromHistory }) {
               type="button"
               onClick={() => setFromHistory(historyItem)}
             >
-              SPIN!
+              SPIN
             </button>
           </Link>
         </div>
