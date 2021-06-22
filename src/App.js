@@ -6,7 +6,8 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import React, { useState } from "react";
+import ls from "local-storage";
+import React, { useEffect, useState } from "react";
 import Roulette from "./Roulette";
 import Search from "./Search";
 import User from "./User";
@@ -14,7 +15,11 @@ import Login from "./Login";
 
 function App() {
   const [selections, addSelection] = useState([]);
-  const [history, addToHistory] = useState([]);
+
+  const [history, addToHistory] = useState(() => {
+    const persistedValue = window.localStorage.getItem("history");
+    return persistedValue !== null ? JSON.parse(persistedValue) : "";
+  });
 
   const onClick = (input) => {
     addSelection((arr) => [...arr, input]);
@@ -27,7 +32,7 @@ function App() {
     const dateAdded = new Date();
     // adds date to selections object
     selections[0].historyDate = dateAdded;
-    addToHistory((arr) => [...arr, selections]);
+    addToHistory((arr) => [selections, ...arr]);
   };
 
   const clearState = () => {
@@ -41,6 +46,10 @@ function App() {
       addSelection((arr) => [...arr, item]);
     });
   };
+
+  useEffect(() => {
+    window.localStorage.setItem("history", JSON.stringify(history));
+  }, [history]);
 
   return (
     <Router>
