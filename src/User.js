@@ -2,8 +2,9 @@
 import React from "react";
 import Header from "./components/Header";
 import HistoryCard from "./components/HistoryCard";
+import Footer from "./components/Footer";
 
-function User({ selections, history, setFromHistory }) {
+function User({ selections, history, setFromHistory, clear }) {
   console.log(history);
   return (
     <>
@@ -14,6 +15,7 @@ function User({ selections, history, setFromHistory }) {
         history={history}
         setFromHistory={setFromHistory}
       />
+      <Footer clear={clear} buttonText="CLEAR HISTORY" />
     </>
   );
 }

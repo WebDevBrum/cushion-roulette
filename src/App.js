@@ -6,7 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import ls from "local-storage";
+
 import React, { useEffect, useState } from "react";
 import Roulette from "./Roulette";
 import Search from "./Search";
@@ -51,6 +51,12 @@ function App() {
     window.localStorage.setItem("history", JSON.stringify(history));
   }, [history]);
 
+  function clearStorage() {
+    console.log("clearing storage");
+    addToHistory([]);
+    localStorage.clear();
+  }
+
   return (
     <Router>
       <div>
@@ -94,6 +100,7 @@ function App() {
                 selections={selections}
                 history={history}
                 setFromHistory={setFromHistory}
+                clear={clearStorage}
               />
             )}
           />
