@@ -86,6 +86,7 @@ function App() {
                 history={history}
                 setFromHistory={setFromHistory}
                 clear={clearStorage}
+                clearState={clearState}
               />
             )}
           />
