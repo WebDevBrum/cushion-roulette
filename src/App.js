@@ -36,6 +36,7 @@ function App() {
   };
 
   const clearState = () => {
+    console.log("state cleared");
     addSelection([]);
   };
 
@@ -75,6 +76,19 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/user"
+            render={(props) => (
+              <User
+                {...props}
+                selections={selections}
+                history={history}
+                setFromHistory={setFromHistory}
+                clear={clearStorage}
+              />
+            )}
+          />
           {selections[0] ? (
             <Route
               exact
@@ -91,19 +105,7 @@ function App() {
           ) : (
             <Redirect to="/" />
           )}
-          <Route
-            exact
-            path="/user"
-            render={(props) => (
-              <User
-                {...props}
-                selections={selections}
-                history={history}
-                setFromHistory={setFromHistory}
-                clear={clearStorage}
-              />
-            )}
-          />
+
           <Route exact path="/login" component={Login} />
           {/* <PrivateToute /> */}
           {/* <Route unhandled error />

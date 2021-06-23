@@ -11,7 +11,7 @@ function Roulette(props) {
 
   return (
     <>
-      <Header config={{ button1: "user" }} />
+      <Header config={{ button1: "user" }} clear={clear} />
       <Wheel selections={selections} />
       <Selections selections={selections} buttonRqd={false} />
       <Link to="/search">

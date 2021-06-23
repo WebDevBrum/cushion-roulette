@@ -9,12 +9,13 @@ import { FaUserAlt } from "react-icons/fa";
 
 function Header(props) {
   const { button1, button2 } = props.config;
+  const { clear } = props;
 
   return (
     <div className="header">
       <h1 className="app-title">CUSHION ROULETTE</h1>
       <div className="header-buttons">
-        <Link to={`/${button1}`}>
+        <Link to={`/${button1}`} onClick={() => clear()}>
           <button
             aria-label="redirect buttons"
             className="header-button"
@@ -25,7 +26,7 @@ function Header(props) {
             {button1 === "user" && <FaUserAlt />}
           </button>
         </Link>
-        <Link to={`/${button2}`}>
+        <Link to={`/${button2}`} onClick={() => clear()}>
           <button
             className="header-button"
             type="button"

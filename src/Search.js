@@ -13,7 +13,8 @@ function Search(props) {
 
   return (
     <div className="search-div">
-      <Header config={{ button1: "login", button2: "user" }} />
+      <Header config={{ button1: "login", button2: "user" }} clear={clear} />
+
       <Selections selections={selections} buttonRqd addHistory={addHistory} />
       <SearchTitles onClick={onClick} selections={selections.length} />
       <Footer clear={clear} buttonText="CLEAR SELECTIONS" />

@@ -52,6 +52,13 @@ function SearchTitles(props) {
             <HiEye />
           </button>
         </div>
+        {!titles[0] && (
+          <div className="welcome">
+            <h2>Welcome to Cushion Roulette</h2>
+            <p>Can't choose what to watch?</p>
+            <p>Then select some titles to begin!</p>
+          </div>
+        )}
       </form>
       <div className="card-list">
         {titles
