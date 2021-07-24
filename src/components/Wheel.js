@@ -9,11 +9,11 @@ const limitedString = (string, limit) => `${string.substring(0, limit)}`;
 
 export default (props) => {
   // eslint-disable-next-line react/destructuring-assignment
-  const testArray = props.selections;
+  const selectionArray = props.selections;
   const options = [];
 
   // eslint-disable-next-line react/destructuring-assignment
-  testArray.map(
+  selectionArray.map(
     (selection) =>
       options.push({
         option: selection.title
@@ -21,18 +21,8 @@ export default (props) => {
           : limitedString(selection.name, 15),
       }),
     console.log(options),
-    console.log(testArray)
+    console.log(selectionArray)
   );
-
-  // const options = [
-  //   // eslint-disable-next-line react/destructuring-assignment
-  //   { option: "Proframme 0" },
-  //   { option: "Programme 1" },
-  //   { option: "Programme 2" },
-  //   { option: "Programme 3" },
-  //   { option: "Programme 4" },
-  //   { option: "Programme 5" },
-  // ];
 
   const [mustSpin, setMustSpin] = useState(false);
   const [programmeNumber, setProgrammeNumber] = useState(0);

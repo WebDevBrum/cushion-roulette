@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import tileImage from "../images/tileImage.jpeg";
 // Remember image will eventually be imported from state so this blank needs to be moved to state
 function Selections(props) {
-  const { selections, buttonRqd } = props;
+  const { selections, buttonRqd, addHistory } = props;
   const url = "https://image.tmdb.org/t/p/w185_and_h278_bestv2/";
-  // selections[0].poster_path
+
   return (
     <div className={buttonRqd ? "tile-grid" : "wheel-tile-grid"}>
       <div className={buttonRqd ? "tiles-left" : "wheel-tiles-left"}>
@@ -52,7 +52,7 @@ function Selections(props) {
                 selections[0] ? "go-button-button" : "go-button-disabled"
               }
               type="button"
-              onClick={props.addHistory}
+              onClick={addHistory}
               disabled={!selections[0]}
             >
               {selections[0] ? "READY" : ""}

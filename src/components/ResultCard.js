@@ -18,12 +18,6 @@ function ResultCard({ title, onClick, selectionsAmount }) {
         <h3 className="card--title">
           {title.title ? title.title : title.name}
         </h3>
-        {/* <p>
-          <small>RELEASE DATE: {title.release_date}</small>
-        </p>
-        <p>
-          <small>RATING: {title.vote_average}</small>
-        </p> */}
         <p className="card--desc">{limitedString(title.overview, 170)}</p>
         <p className="card--details">
           RELEASE DATE: {title.release_date}
