@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
 
 
-
 html {
   font-size: 10px;
 }
@@ -241,12 +240,9 @@ small {
       grid-template-columns: auto 1fr auto;
       grid-gap: 1rem;
       align-items: center;
-      
-      
   }
   
   .input {
-     
       margin-bottom: 0;
   }
 
@@ -535,3 +531,14 @@ small {
       margin-right: 10px;
     }
   }
+
+.api-logo {
+  width: 50px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.api-attribution {
+  font-size: 10px;
+  color: #999999;
+}
