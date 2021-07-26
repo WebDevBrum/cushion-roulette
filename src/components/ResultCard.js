@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 
 function ResultCard({ title, onClick, selectionsAmount }) {
   console.log(selectionsAmount);
@@ -38,5 +38,11 @@ function ResultCard({ title, onClick, selectionsAmount }) {
     </div>
   );
 }
+
+ResultCard.propTypes = {
+  title: PropTypes.string,
+  onClick: PropTypes.func,
+  selectionsAmount: PropTypes.number,
+};
 
 export default ResultCard;

@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import { HiEye } from "react-icons/hi";
+import PropTypes from "prop-types";
 import ResultCard from "./ResultCard.js";
 
 function SearchTitles(props) {
@@ -75,5 +75,10 @@ function SearchTitles(props) {
     </>
   );
 }
+
+SearchTitles.propTypes = {
+  onClick: PropTypes.func,
+  selections: PropTypes.object,
+};
 
 export default SearchTitles;

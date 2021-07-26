@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 function HistoryCard({ selections, history, setFromHistory }) {
   console.log(selections);
@@ -9,6 +9,8 @@ function HistoryCard({ selections, history, setFromHistory }) {
 
   // limits the length of a string, used here to limit title descriptions
   // const limitedString = (string, limit) => `${string.substring(0, limit)}...`;
+
+  // THERE IS AN ERROR HERE IF HISTORY IS EMPTY (MAYBE LIMIT THIS A LEVEL HIGHER)
 
   return history.map((historyItem, historyIndex) => (
     <div className="history-card-list">
@@ -46,5 +48,11 @@ function HistoryCard({ selections, history, setFromHistory }) {
     </div>
   ));
 }
+
+HistoryCard.propTypes = {
+  selections: PropTypes.object,
+  history: PropTypes.object,
+  setFromHistory: PropTypes.func,
+};
 
 export default HistoryCard;

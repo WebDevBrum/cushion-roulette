@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
+// Query how this is done here re: prop types as not namned function
 /* eslint-disable react/display-name */
 import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";

@@ -1,11 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { IoMdUnlock as Lock } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 function Header(props) {
   const { button1, button2 } = props.config;
@@ -41,5 +40,12 @@ function Header(props) {
     </div>
   );
 }
+
+Header.propTypes = {
+  button1: PropTypes.string,
+  button2: PropTypes.string,
+  clear: PropTypes.func,
+  config: PropTypes.string,
+};
 
 export default Header;

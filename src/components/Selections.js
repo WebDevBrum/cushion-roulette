@@ -1,9 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
+
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import tileImage from "../images/tileImage.jpeg";
-// Remember image will eventually be imported from state so this blank needs to be moved to state
+
 function Selections(props) {
   const { selections, buttonRqd, addHistory } = props;
   const url = "https://image.tmdb.org/t/p/w185_and_h278_bestv2/";
@@ -63,5 +64,11 @@ function Selections(props) {
     </div>
   );
 }
+
+Selections.propTypes = {
+  selections: PropTypes.object,
+  buttonRqd: PropTypes.bool,
+  addHistory: PropTypes.func,
+};
 
 export default Selections;

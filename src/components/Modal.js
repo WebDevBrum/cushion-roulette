@@ -1,8 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect } from "react";
-
-// Proptypes ?
-// Move this conditional rendering up one level to Component Render
+import PropTypes from "prop-types";
 
 function Modal(props) {
   const { visibility, programmeNumber, image, name } = props;
@@ -47,5 +44,12 @@ function Modal(props) {
     </div>
   );
 }
+
+Modal.propTypes = {
+  visibility: PropTypes.bool,
+  programmeNumber: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
+};
 
 export default Modal;
