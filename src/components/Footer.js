@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import apiLogo from "../images/tmdb.png";
 
 function Footer(props) {
@@ -18,5 +18,10 @@ function Footer(props) {
     </div>
   );
 }
+
+Footer.propTypes = {
+  clear: PropTypes.func,
+  buttonText: PropTypes.string,
+};
 
 export default Footer;
