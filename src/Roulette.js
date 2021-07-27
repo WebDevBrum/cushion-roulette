@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import Wheel from "./components/Wheel.js";
 import Header from "./components/Header";
 import Selections from "./components/Selections.js";
@@ -20,5 +20,10 @@ function Roulette(props) {
     </>
   );
 }
+
+Roulette.propTypes = {
+  selections: PropTypes.object,
+  clear: PropTypes.func,
+};
 
 export default Roulette;
