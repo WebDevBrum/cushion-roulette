@@ -23,7 +23,6 @@ function App() {
 
   const onClick = (input) => {
     addSelection((arr) => [...arr, input]);
-    console.log(selections);
     window.scrollTo(0, 0);
   };
 
@@ -41,7 +40,6 @@ function App() {
   };
 
   const setFromHistory = (data) => {
-    console.log(data);
     clearState();
     data.forEach((item) => {
       addSelection((arr) => [...arr, item]);

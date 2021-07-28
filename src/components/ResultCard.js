@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function ResultCard({ title, onClick, selectionsAmount }) {
-  console.log(selectionsAmount);
-
   // limits the length of a string, used here to limit title descriptions
   const limitedString = (string, limit) => `${string.substring(0, limit)}...`;
 

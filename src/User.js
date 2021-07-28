@@ -5,7 +5,6 @@ import HistoryCard from "./components/HistoryCard";
 import Footer from "./components/Footer";
 
 function User({ selections, history, setFromHistory, clearState, clear }) {
-  console.log(history);
   return (
     <>
       <Header config={{ button1: "search" }} clear={clearState} />

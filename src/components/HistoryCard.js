@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 import PropTypes from "prop-types";
 
-function HistoryCard({ selections, history, setFromHistory }) {
-  console.log(selections);
+function HistoryCard({ history, setFromHistory }) {
+  // Sets local timezone
   moment.locale("en-gb");
 
   // limits the length of a string, used here to limit title descriptions
@@ -50,7 +50,6 @@ function HistoryCard({ selections, history, setFromHistory }) {
 }
 
 HistoryCard.propTypes = {
-  selections: PropTypes.object,
   history: PropTypes.object,
   setFromHistory: PropTypes.func,
 };

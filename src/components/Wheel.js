@@ -14,15 +14,12 @@ export default (props) => {
   const options = [];
 
   // eslint-disable-next-line react/destructuring-assignment
-  selectionArray.map(
-    (selection) =>
-      options.push({
-        option: selection.title
-          ? limitedString(selection.title, 15)
-          : limitedString(selection.name, 15),
-      }),
-    console.log(options),
-    console.log(selectionArray)
+  selectionArray.map((selection) =>
+    options.push({
+      option: selection.title
+        ? limitedString(selection.title, 15)
+        : limitedString(selection.name, 15),
+    })
   );
 
   const [mustSpin, setMustSpin] = useState(false);
@@ -34,7 +31,6 @@ export default (props) => {
     const newProgrammeNumber = Math.floor(Math.random() * options.length);
     setProgrammeNumber(newProgrammeNumber);
     setMustSpin(true);
-    console.log(props.selections[0].original_title);
   };
 
   return (
