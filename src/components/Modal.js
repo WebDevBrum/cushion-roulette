@@ -35,7 +35,7 @@ function Modal(props) {
           <img
             width="400"
             height="400"
-            src={`https:image.tmdb.org/t/p/w185_and_h278_bestv2/${image}`}
+            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${image}`}
             alt={programmeNumber}
           />
           <p>{name}</p>

@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 function ResultCard({ title, onClick, selectionsAmount }) {
   // limits the length of a string, used here to limit title descriptions
   const limitedString = (string, limit) => `${string.substring(0, limit)}...`;
-  const posterImage = "https://image.tmdb.org/t/p/w185_and_h278_bestv2/" + title.poster_path;
 
   return (
     <div className="card">
       <img
         className="card--image"
-        src={posterImage}
+        src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${title.poster_path}`}
         alt={`${title.title} poster`}
       />
       <div className="card--content">
